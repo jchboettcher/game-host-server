@@ -58,3 +58,5 @@ typings/
 
 graphql.config.json
 graphql.schema.json
+
+package-lock.json
