@@ -6,12 +6,15 @@ module.exports = `
   }
 
   type Query {
+    playersInRoom(roomCode: String!): [Player!]!
   }
 
   type Player {
     id: ID!
     name: String!
-    roomCode: String!
+    playerNumber: Int!
+    joinedAt: String!
+    game: Game!
   }
 
   input AddPlayer {

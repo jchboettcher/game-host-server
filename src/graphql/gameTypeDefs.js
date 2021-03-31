@@ -1,14 +1,15 @@
 // const { gql } = require('apollo-boost')
 
-module.exports = gql`
+module.exports = `
   type Mutation {
     addGame(input: AddGame!): Game!
     updateTurn(id: ID!, newTurn: Int!): Game!
+    redistrOrder(id: ID!): Game!
   }
 
   type Query {
     allGames: [Game!]!
-    gameByCode(roomCode: String!): Game!
+    gameByCode(roomCode: String!): Game
   }
 
   type Game {

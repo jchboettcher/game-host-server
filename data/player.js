@@ -3,6 +3,7 @@ const gameData = require('./game')
 
 casual.define('player', gameId => ({
   name: casual.first_name,
+  playerNumber: casual.integer(from=0, to=10),
   gameId,
 }))
 

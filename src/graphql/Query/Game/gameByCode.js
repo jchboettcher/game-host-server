@@ -1,4 +1,4 @@
-const Game = require('../../models/Game')
+const Game = require('../../../models/Game')
 
 const gameByCode = async (obj, { roomCode }, context) => {
   try {
@@ -6,8 +6,8 @@ const gameByCode = async (obj, { roomCode }, context) => {
     return game
   } catch (error) {
     console.warn(error)
-    // throw new Error('failed to get user by name')
-    throw error
+    throw new Error('failed to get game by code')
+    // throw error
   }
 }
 

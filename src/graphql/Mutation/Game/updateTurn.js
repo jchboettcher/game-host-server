@@ -1,5 +1,5 @@
 // Import Objection Models Here!
-const Game = require('../../models/Game')
+const Game = require('../../../models/Game')
 
 // eslint-disable-next-line no-unused-vars
 const updateTurn = async (obj, { id, newTurn }, context) => {
@@ -11,8 +11,8 @@ const updateTurn = async (obj, { id, newTurn }, context) => {
   } catch (error) {
     // eslint-disable-next-line no-console
     console.warn(error)
-    // throw new Error('failed to update score')
-    throw error
+    throw new Error('failed to update turn')
+    // throw error
   }
 }
 

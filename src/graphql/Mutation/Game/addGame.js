@@ -1,5 +1,5 @@
 // Import Objection Models Here!
-const Game = require('../../models/Game')
+const Game = require('../../../models/Game')
 
 // eslint-disable-next-line no-unused-vars
 const addGame = async (obj, { input }, context) => {
@@ -10,7 +10,7 @@ const addGame = async (obj, { input }, context) => {
     // eslint-disable-next-line no-console
     console.warn(error)
     // return null
-    throw new Error('failed to insert user')
+    throw new Error('failed to insert game')
     // throw error
   }
 }

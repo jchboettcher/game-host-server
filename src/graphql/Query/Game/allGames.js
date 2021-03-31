@@ -1,4 +1,4 @@
-const Game = require('../../models/Game')
+const Game = require('../../../models/Game')
 
 const allGames = async () => {
   try {
@@ -7,10 +7,11 @@ const allGames = async () => {
   } catch (error) {
     // eslint-disable-next-line no-console
     console.warn(error)
-    // throw new Error('failed to get users')
-    throw error
+    throw new Error('failed to get games')
+    // throw error
   }
 }
+
 const resolver = {
   Query: { allGames },
 }
