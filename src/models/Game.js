@@ -1,8 +1,8 @@
 const BaseModel = require('./BaseModel')
 
-class User extends BaseModel {
+class Game extends BaseModel {
   static get tableName() {
-    return 'users'
+    return 'games'
   }
 
   static get relationMappings() {
@@ -10,4 +10,4 @@ class User extends BaseModel {
   }
 }
 
-module.exports = User
+module.exports = Game

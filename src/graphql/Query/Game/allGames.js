@@ -1,9 +1,9 @@
-const User = require('../../models/User')
+const Game = require('../../models/Game')
 
-const allUsers = async () => {
+const allGames = async () => {
   try {
-    const users = await User.query().where('score','>',0).orderBy('score','DESC','rank','ASC')
-    return users
+    const games = await Game.query().where('public',true).orderBy('numPlayers','DESC')
+    return games
   } catch (error) {
     // eslint-disable-next-line no-console
     console.warn(error)
@@ -12,7 +12,7 @@ const allUsers = async () => {
   }
 }
 const resolver = {
-  Query: { allUsers },
+  Query: { allGames },
 }
 
 module.exports = resolver
